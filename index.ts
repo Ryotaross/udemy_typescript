@@ -1,9 +1,28 @@
-import axios from 'axios';
+import { NumberTypeAnnotation } from "@babel/types";
 
-let hello: string = 'hello';
-console.log(hello);
+let hasValue = true;
+let count = 10;
+let float = 3.14;
+let negative = -0.12;
+let single = 'hello';
+let double = "hello";
+let back = `hello`;
+let hello:string;
+hello = 'hello';
 
-function add(a:number,b:number):number{
-  return a + b;
+const person = {
+  name : {
+    first: 'Smith',
+    last: 'Row'
+  },
+  age: 21
 }
+
+const fruits = ['Apple','Banana','Grape',1];
+
+const book: [string, number, boolean] = ['bussiness', 1500, false];
+book.push(21);
+
+console.log(book[2]);
+
 
