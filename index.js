@@ -18,5 +18,15 @@ var person = {
 };
 var fruits = ['Apple', 'Banana', 'Grape', 1];
 var book = ['bussiness', 1500, false];
-book.push(21);
-console.log(book[2]);
+var CoffeeSize;
+(function (CoffeeSize) {
+    CoffeeSize["Short"] = "short";
+    CoffeeSize["Tall"] = "Tall";
+    CoffeeSize["Grande"] = "Grande";
+    CoffeeSize["Venti"] = "Venti";
+})(CoffeeSize || (CoffeeSize = {}));
+var coffee = {
+    hot: true,
+    size: CoffeeSize.Tall
+};
+console.log(CoffeeSize.Short);

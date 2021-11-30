@@ -21,8 +21,20 @@ const person = {
 const fruits = ['Apple','Banana','Grape',1];
 
 const book: [string, number, boolean] = ['bussiness', 1500, false];
-book.push(21);
 
-console.log(book[2]);
+enum CoffeeSize  {
+  Short = 'short',
+  Tall = 'Tall',
+  Grande = 'Grande',
+  Venti = 'Venti' 
+}
+
+const coffee = {
+  hot: true,
+  size: CoffeeSize.Tall
+}
+
+console.log(CoffeeSize.Short);
+
 
 
