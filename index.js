@@ -30,3 +30,42 @@ var coffee = {
     size: CoffeeSize.Tall
 };
 console.log(CoffeeSize.Short);
+var unionType = 10;
+unionType = 'hello';
+var apple = 'apple';
+var clothSize = 'large';
+var cloth = {
+    color: 'white',
+    size: 'large'
+};
+function add(num1, num2) {
+    return num1 + num2;
+}
+function sayHello() {
+    console.log('Hello!');
+}
+console.log(sayHello());
+var tmp;
+var anotherAdd = add;
+var doubleNumber = function (num) { return num * 2; };
+function doubleAndHandle(num, cb) {
+    var doubleNum = cb(num * 2);
+    console.log(doubleNum);
+}
+doubleAndHandle(21, function (doubleNum) {
+    return doubleNum;
+});
+var unknownInput;
+var anyInput;
+var text;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+if (typeof unknownInput === 'string') {
+    text = unknownInput;
+}
+function error(message) {
+    throw new Error(message);
+}
+console.log(error('This is an error!'));

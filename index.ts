@@ -1,4 +1,5 @@
 import { NumberTypeAnnotation } from "@babel/types";
+import { func } from "prop-types";
 
 let hasValue = true;
 let count = 10;
@@ -36,5 +37,54 @@ const coffee = {
 
 console.log(CoffeeSize.Short);
 
+let unionType: number | string = 10;
+unionType = 'hello';
+
+type ClothSize = 'small' | 'medium' | 'large'
+const apple =  'apple';
+let clothSize : ClothSize = 'large'
+
+const cloth : {
+  color: string,
+  size: ClothSize
+} = {
+  color : 'white',
+  size : 'large'
+}
+
+function add (num1: number,num2: number): number {
+  return num1 + num2;
+}
+
+function sayHello(): void{
+  console.log('Hello!')
+}
+
+console.log(sayHello());
+let tmp: undefined;
+
+const anotherAdd : (n1: number, n2: number) => number = add;
+
+const doubleNumber: (num: number) => number = num => num * 2;
+
+function doubleAndHandle(num: number, cb: (num: number) => number): void {
+  const doubleNum = cb(num * 2);
+  console.log(doubleNum);
+}
+
+doubleAndHandle(21,doubleNum => {
+  return doubleNum
+});
+
+let unknownInput: unknown ;
+let anyInput: any;
+let text: string;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+if(typeof unknownInput === 'string'){
+  text = unknownInput
+}
 
 
