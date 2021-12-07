@@ -91,3 +91,19 @@ const downloadData: DownloadData ={
 }
 console.log(downloadData.user?.name?.first);
 const userData = downloadData.user ?? 'no-user'
+type id = DownloadData["id"]
+enum Color{
+  RED,
+  BLUE
+}
+class AdvancedPerson {
+  name: string = 'Peter'
+  age: number = 35;
+}
+class AdvancedCar {
+  name: string = 'Prius'
+  age: number = 5;
+}
+let target = new AdvancedPerson()
+let source = new AdvancedCar()
+target = source;
