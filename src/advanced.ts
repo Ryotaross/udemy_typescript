@@ -102,7 +102,7 @@ class AdvancedPerson {
 }
 class AdvancedCar {
   name: string = 'Prius'
-  age: number = 5;
+  age: number = 6;
 }
 let target = new AdvancedPerson()
 let source = new AdvancedCar()

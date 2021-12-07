@@ -77,7 +77,7 @@ class AdvancedPerson {
 class AdvancedCar {
     constructor() {
         this.name = 'Prius';
-        this.age = 5;
+        this.age = 6;
     }
 }
 let target = new AdvancedPerson();
