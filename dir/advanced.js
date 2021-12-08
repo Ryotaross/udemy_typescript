@@ -11,7 +11,8 @@ function toUpperCase(x) {
     }
     return x;
 }
-const upperHello = toUpperCase('hello');
+const upperHello = function (x) { return 0; };
+let unionFunc;
 function describeProfile(nomadWorker) {
     console.log(nomadWorker.name);
     if ('role' in nomadWorker) {
@@ -83,3 +84,9 @@ class AdvancedCar {
 let target = new AdvancedPerson();
 let source = new AdvancedCar();
 target = source;
+function advancedFn(...args) {
+}
+advancedFn(0, 1);
+let milk = 'milk';
+let drink = milk;
+const array = [10, 20];

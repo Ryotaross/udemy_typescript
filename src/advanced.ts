@@ -25,7 +25,20 @@ function toUpperCase(x: string | number): string| number{
   }
   return x;
 }
-const upperHello = toUpperCase('hello');
+interface TmpFunc {
+  (x: string): number;
+  (x: string): number;
+}
+const upperHello: TmpFunc = function(x: string | number){return 0};
+interface FuncA {
+  (a: number): number;
+}
+interface FuncB {
+  (a: string): number;
+}
+let unionFunc: FuncA & FuncB;
+
+//unionFunc = function(a: number | string, b?: number | string) {return 0}
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker){
@@ -107,3 +120,10 @@ class AdvancedCar {
 let target = new AdvancedPerson()
 let source = new AdvancedCar()
 target = source;
+
+function advancedFn(...args: readonly number[]) {
+}
+advancedFn(0, 1);
+let milk = 'milk' as const;
+let drink = milk;
+const array = [10, 20] as const;
