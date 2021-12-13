@@ -90,3 +90,7 @@ advancedFn(0, 1);
 let milk = 'milk';
 let drink = milk;
 const array = [10, 20];
+const peter = {
+    name: 'Peter',
+    age: 38,
+};
